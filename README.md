@@ -1,3 +1,31 @@
+- Add headers
+# This is a header
+
+- Add an image:
+![Add image](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F03444f0d-7f2c-45b4-85e3-a8b930c1e9f8_593x323.png)
+
+- Add a code example
+```
+- (void)runThread {
+    @autoreleasepool {
+        NSRunLoop *runLoop = [NSRunLoop currentRunLoop];
+        
+        // Add a permanent event source to keep the RunLoop active
+        [runLoop addPort:[NSMachPort port] forMode:NSDefaultRunLoopMode];
+        
+        // Use the runMode:beforeDate: method to start the RunLoop
+        // Set a future date as the deadline
+        while (!weakself.isStopped) {
+            [runLoop runMode:NSDefaultRunLoopMode beforeDate:[NSDate dateWithTimeIntervalSinceNow:10.0]];
+        }
+    }
+}
+```
+
+- Make a task list
+- [ ] this is a task list
+- [x] completed task
+
 <header>
 
 <!--
